@@ -1,8 +1,8 @@
-function wall() {
-    this.x = random(screen.width);
-    this.y = random(screen.height);
-    this.w = 70;
-    this.h = 70;
+function wall(x,y,w,h) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
     this.body = Bodies.rectangle(this.x, this.y, this.w,this.h,{isStatic : true});
     World.add(engine.world, this.body);
     this.display = function() {
